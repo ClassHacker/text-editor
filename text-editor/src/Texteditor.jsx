@@ -3,7 +3,21 @@ import "quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
 
 const TextEditor = () => {
-  var modules = {};
+  var modules = {
+    toolbar: [
+        [{ size: ["small", false, "large", "huge"]}],
+        ["bold", "italic", "underline", "strike", "blockquote"],
+        ["link", "image"],
+        [
+            {list: "ordered"}, 
+            {list: "bullet"},
+            {indent: "-1"},
+            {indent: "+1"},
+            {align: []}
+        ],
+        [{"color": ["#000000", "#e6000000", "#ff9900", "#ffff00"]}]
+    ]
+  };
   var formats = [
     "headers",
     "height",
